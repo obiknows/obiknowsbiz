@@ -1,6 +1,6 @@
-# Welcome to Buffalo!
+# Welcome to Obi KNows Biz
 
-Thank you for choosing Buffalo for your web development needs.
+We use Buffalo for your web development needs.
 
 ## Database Setup
 

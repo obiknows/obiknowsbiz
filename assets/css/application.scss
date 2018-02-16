@@ -2,3 +2,11 @@
 // @import "~bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "~font-awesome/css/font-awesome.css";
 @import "tachyons.css";
+
+// App CSS
+.paper {
+  margin: 0 auto;
+  height: 80vh;
+  width: 80vw;
+  background-color: #ebe6d4,
+}
