@@ -1,6 +1,20 @@
-# Welcome to Obi KNows Biz
+Obi KNows Biz
+=============
+
+# Welcome to Obi Knows Biz
 
 We use Buffalo for your web development needs.
+
+## Why Buffalo
+Buffalo is dumb lit. You get:
+
+- a go server
+- all the node/npm/yarn js things
+- any scss you want
+- added db
+- docker support
+- and more....
+
 
 ## Database Setup
 
