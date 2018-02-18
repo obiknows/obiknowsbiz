@@ -58,6 +58,7 @@ func App() *buffalo.App {
 		app.GET("/routes", RoutesHandler)
 
 		app.ServeFiles("/assets", assetsBox)
+		app.GET("/card", CardIndex)
 	}
 
 	return app
