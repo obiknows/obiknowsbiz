@@ -1,16 +1,34 @@
+// Bootstrap
 // @import "~bootstrap-sass/assets/stylesheets/_bootstrap-sprockets.scss";
 // @import "~bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-@import "~font-awesome/css/font-awesome.css";
-@import "tachyons.css";
 
-// App CSS
-.paper {
+// icons
+@import "~font-awesome/css/font-awesome.css";
+
+// Tachyons (design system)
+@import "tachyons.css";
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Quattrocento');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+
+// Global CSS
+.quattro {
+  font-family: 'Quattrocento', serif;
+}
+.libre {
+  font-family: 'Libre Baskerville', serif;
+}
+
+.card-paper {
   margin: 0 auto;
   height: 80vh;
-  max-height: 440px;
+  // max-height: 440px;
   width: 70vw;
-  max-width: 740px;
-  background-color: #ebe6d4,
+  // max-width: 740px;
+  min-width: 300px;
+  min-height: 440px;
+  background-color: lemonchiffon,
+  // background-color: #ebe6d4,
 }
 
 .rolodex {
@@ -20,6 +38,6 @@
 }
 
 // Card should mirror `urbanjungle.jpg`
-#card-back {
+#card-wall {
   background:url('https://78.media.tumblr.com/d3f4baf2afe2efb5876eb49b5b65de7f/tumblr_ndlbi5zAdj1tkoa55o1_r1_1280.jpg') no-repeat center;
 }
