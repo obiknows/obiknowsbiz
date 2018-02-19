@@ -9,7 +9,7 @@ module.exports = {
   entry: {
     application: [
       "./assets/js/application.js",
-      "./node_modules/jquery-ujs/src/rails.js",
+      // "./node_modules/jquery-ujs/src/rails.js",
       "./assets/css/application.scss"
     ]
   },

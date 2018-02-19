@@ -17,6 +17,7 @@ import (
 // application is being run. Default is "development".
 var ENV = envy.Get("GO_ENV", "development")
 var app *buffalo.App
+
 // T is the international translator
 var T *i18n.Translator
 
@@ -61,6 +62,9 @@ func App() *buffalo.App {
 
 		app.ServeFiles("/assets", assetsBox)
 		app.GET("/card", CardIndex)
+		app.GET("/code", CodeIndex)
+		app.GET("/art", ArtIndex)
+		app.GET("/knxws", ResearchIndex)
 	}
 
 	return app
