@@ -18,4 +18,4 @@ build_delay: 200ns
 binary_name: obiknowsbiz-build
 command_flags: []
 enable_colors: true
-log_name: buffalo
+log_name: obiknowsbiz

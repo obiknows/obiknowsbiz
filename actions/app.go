@@ -55,19 +55,20 @@ func App() *buffalo.App {
 			app.Stop(err)
 		}
 		app.Use(T.Middleware())
-		
-		// Testing 
+
+		// Testing
 		app.ServeFiles("/assets", assetsBox)
 		app.GET("/routes", RoutesHandler)
-		
+
 		// The Pages
 		app.GET("/", IndexHandler)
 		app.GET("/home", HomeHandler)
 		app.GET("/card", CardIndex)
-		app.GET("/code", CodeIndex)
 		app.GET("/art", ArtIndex)
 		app.GET("/knxws", ResearchIndex)
 		app.GET("/crypto", CryptoIndex)
+		app.GET("/code", CodeIndex)
+		app.GET("/code/getRepos/", CodeToGetRepos)
 	}
 
 	return app
