@@ -68,7 +68,7 @@ func App() *buffalo.App {
 		app.GET("/knxws", ResearchIndex)
 		app.GET("/crypto", CryptoIndex)
 		app.GET("/code", CodeIndex)
-		app.GET("/code/getRepos/", CodeToGetRepos)
+		app.GET("/code/getRepos", CodeToGetRepos)
 	}
 
 	return app
