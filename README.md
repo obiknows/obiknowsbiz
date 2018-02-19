@@ -5,6 +5,12 @@ Obi KNows Biz
 
 We use Buffalo for your web development needs.
 
+## Why Does This Exist
+
+So I can have a place on the internet, a platform to test things,
+
+databases to collect the data. also a way to mess around with docker
+
 ## Why Buffalo
 Buffalo is dumb lit. You get:
 
