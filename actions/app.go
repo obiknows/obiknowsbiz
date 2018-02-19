@@ -68,7 +68,10 @@ func App() *buffalo.App {
 		app.GET("/knxws", ResearchIndex)
 		app.GET("/crypto", CryptoIndex)
 		app.GET("/code", CodeIndex)
-		app.GET("/code/getRepos", CodeToGetRepos)
+
+		// Api Domain ([domain.com]/api/v1/...)
+		api := app.Group("/api/v1")
+		api.GET("/code/getRepos", CodeToGetRepos)
 	}
 
 	return app

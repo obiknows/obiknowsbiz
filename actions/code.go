@@ -1,7 +1,6 @@
 package actions
 
 import (
-	"fmt"
 	"github.com/gobuffalo/buffalo"
 	"github.com/google/go-github/github" 
 )
@@ -13,19 +12,13 @@ func CodeIndex(c buffalo.Context) error {
 
 // CodeApi default implementation.
 func CodeToGetRepos(c buffalo.Context) error {
-
 	// list public repositories for org "github"
 	client := github.NewClient(nil)
 
 	user := "obiknows"
 	opt := &github.RepositoryListOptions{Type: "owner", Sort: "updated", Direction: "desc"}
+	repos, _, _ := client.Repositories.List(c, user, opt)
 
-	repos, _, err := client.Repositories.List(c, user, opt)
-	if err != nil {
-		fmt.Println(err)
-	}
-
-	// fmt.Printf("Recently updated repositories by %q: %v", github.Stringify(repos))
-
+	// returns 'obiknows' repos
 	return c.Render(200, r.JSON(repos))
 }
