@@ -6,3 +6,8 @@ import "github.com/gobuffalo/buffalo"
 func IndexHandler(c buffalo.Context) error {
 	return c.Render(200, r.HTML("index.html"))
 }
+
+// KubeHandler is a default handler to serve
+func KubeHandler(c buffalo.Context) error {
+	return c.Render(200, r.HTML("kubed.html"))
+}

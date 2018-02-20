@@ -65,6 +65,8 @@ func App() *buffalo.App {
 		api.GET("/code/getRepos", CodeToGetRepos)
 
 		// TheSitePages
+		app.GET("/kubed", KubeHandler)
+
 		app.GET("/", IndexHandler)
 		app.GET("/home", HomeHandler)
 		app.GET("/card", CardIndex)

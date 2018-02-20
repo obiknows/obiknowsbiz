@@ -1,19 +1,45 @@
-<article class="athelas">
-  <div id="card-wall" class="vh-100 dt w-100 tc bg-dark-gray white cover" />
-  <div class="dtc v-mid">
-    <div class="card-paper black-80 business-card">
-      <!-- Business Card Header (change to obi card, something cool) -->
-      <h3 class="f6 fw1 ttu tracked pt4 lh-title">home page</h3>
-
-
-      <h2 class="libre f1 f-headline-l fw1 i black-80 mb1">Obi Knows</h2>
-      <!-- <cite class="f6 ttu tracked fs-normal">obinna nnodim</cite> -->
-        <blockquote class="ph0 mh0 measure f4 lh-copy center black-80">
-          <h3 class="fw1 black-80 mb5">
-            This a home page, go free
-          </h3>
-        </blockquote>
-    </div>
+<!-- Header (make this sticky) -->
+<nav class="helvetica pa3 pa4-ns">
+  <!-- change this to the O with bee electron -->
+  <a class="link dim black b f1 f-headline-ns tc db mb3 mb3-ns navy" href="#" title="Home">Obi Knows</a>
+  <div class="tc pb3">
+    <a class="link dim gray f6 f5-ns dib mr3" href="#" title="Home">Home</a>
+    <a class="link dim gray f6 f5-ns dib mr3" href="#" title="About">About</a>
+    <a class="link dim gray f6 f5-ns dib mr3" href="#" title="Store">Store</a>
+    <a class="link dim gray f6 f5-ns dib mr3" href="#" title="Contact">Contact</a>
+    <a class="link dim gray f6 f5-ns dib" href="/" title="Contact">More</a>
   </div>
+</nav>
+
+<!-- List Body -->
+<article class="mw5 mw7-ns center bg-gold white pa3 pa5-ns ba bw3 b--white-80 shadow-3">
+  
+  <!-- Vinyl Wall -->
+  <div class="aspect-ratio aspect-ratio--16x9 mb4 ">
+    <%= partial("vinylwall.html") %>
+  </div>
+
+  <h4 class="f6">8:5</h4>
+  <div class="aspect-ratio aspect-ratio--8x5 mb4 ba bw3 b--white-80">
+    <div class="aspect-ratio--object cover" style="background:url(http://mrmrs.github.io/photos/001.jpg) center;"></div>
+  </div>
+  <h4 class="f6">7:5</h4>
+  <div class="aspect-ratio aspect-ratio--7x5 mb4">
+    <div class="aspect-ratio--object cover" style="background:url(http://mrmrs.github.io/photos/001.jpg) center;"></div>
+  </div>
+  <h4 class="f6">6:4</h4>
+  <div class="aspect-ratio aspect-ratio--6x4 mb4">
+    <div class="aspect-ratio--object cover" style="background:url(http://mrmrs.github.io/photos/001.jpg) center;"></div>
+  </div>
+  <h4 class="f6">4:3</h4>
+  <div class="aspect-ratio aspect-ratio--4x3 mb4">
+    <div class="aspect-ratio--object cover" style="background:url(http://mrmrs.github.io/photos/001.jpg) center;"></div>
+  </div>
+  <h4 class="f6">1:1</h4>
+  <div class="aspect-ratio aspect-ratio--1x1 mb4">
+    <div class="aspect-ratio--object cover" style="background:url(http://mrmrs.github.io/photos/001.jpg) center;"></div>
   </div>
 </article>
+
+<!-- Footer -->
+<%= partial("footer.html") %>

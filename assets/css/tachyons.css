@@ -1,5 +1,7 @@
 /*! TACHYONS v4.9.0 | http://tachyons.io */
 
+/* Warning this is custom tachyons */
+
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 
 html {
@@ -12,14 +14,14 @@ body {
   margin: 0
 }
 
-article,
+/* article,
 aside,
 footer,
 header,
 nav,
 section {
   display: block
-}
+} */
 
 h1 {
   font-size: 2em;

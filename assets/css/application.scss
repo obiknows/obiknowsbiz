@@ -5,8 +5,11 @@
 // icons
 @import "~font-awesome/css/font-awesome.css";
 
+// Kube
+@import "kube.scss";
+
 // Tachyons (design system)
-@import "tachyons.css";
+@import "tachyons.css";  // commented out for kube
 
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Quattrocento');
@@ -41,4 +44,20 @@
 // Card should mirror `urbanjungle.jpg`
 #card-wall {
   background:url('https://78.media.tumblr.com/d3f4baf2afe2efb5876eb49b5b65de7f/tumblr_ndlbi5zAdj1tkoa55o1_r1_1280.jpg') no-repeat center;
+}
+
+
+// Kube
+#media-grid {
+  @include grid-media-columns(2);
+  &>div {
+    margin-bottom: 20px;
+    height: 80px;
+  }
+  &>div:nth-child(2n) {
+    height: 200px;
+  }
+  &>div:nth-child(5n) {
+    height: 120px;
+  }
 }
