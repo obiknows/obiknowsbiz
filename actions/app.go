@@ -60,7 +60,11 @@ func App() *buffalo.App {
 		app.ServeFiles("/assets", assetsBox)
 		app.GET("/routes", RoutesHandler)
 
-		// The Pages
+		// Api Domain ([domain.com]/api/v1/...)
+		api := app.Group("/api/v1")
+		api.GET("/code/getRepos", CodeToGetRepos)
+
+		// TheSitePages
 		app.GET("/", IndexHandler)
 		app.GET("/home", HomeHandler)
 		app.GET("/card", CardIndex)
@@ -68,10 +72,11 @@ func App() *buffalo.App {
 		app.GET("/knxws", ResearchIndex)
 		app.GET("/crypto", CryptoIndex)
 		app.GET("/code", CodeIndex)
+		app.GET("/food", FoodIndex)
+		app.GET("/pocket", PocketIndex)
+		app.GET("/pocket/edit", PocketEdit)
 
-		// Api Domain ([domain.com]/api/v1/...)
-		api := app.Group("/api/v1")
-		api.GET("/code/getRepos", CodeToGetRepos)
+		app.GET("/hemp", HempIndex)
 	}
 
 	return app

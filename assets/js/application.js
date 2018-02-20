@@ -1,14 +1,30 @@
 /* application.js -- the main js file*/ 
 
+// jQuery (for Kube)
+require("expose-loader?$!expose-loader?jQuery!jquery");
+
+
+// require("bootstrap-sass/assets/javascripts/bootstrap.js");
+
 // Libraries and Any JS (Requires/Imports)
 
 $(() => {
   console.log('we outchea');
 
   const heatmap_data = {
+    "1485684800": 4,
+    "1484684800": 4,
+    "1484684800": 3,
+    "1484684800": 4,
+    "1484684800": 2,
+    "1484684800": 2,
+    "1484684800": 2,
+    "1484684800": 1,
+    "1484684800": 2,
+    "1484684800": 5,
     "1486684800": 4,
-    "1486771200": 0,
-    "1486857600": 1,
+    "1486771200": 2,
+    "1489857600": 1,
   }
 
   let heatmap = new Chart({
