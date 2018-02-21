@@ -79,6 +79,7 @@ func App() *buffalo.App {
 		app.GET("/pocket/edit", PocketEdit)
 
 		app.GET("/hemp", HempIndex)
+		app.GET("/sounds", BeatsIndex)
 	}
 
 	return app
