@@ -68,6 +68,7 @@ func App() *buffalo.App {
 		app.GET("/kubed", KubeHandler)
 
 		app.GET("/", IndexHandler)
+		app.GET("/vue", IndexHandler)
 		app.GET("/home", HomeHandler)
 		app.GET("/card", CardIndex)
 		app.GET("/art", ArtIndex)
