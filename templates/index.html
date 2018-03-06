@@ -10,6 +10,18 @@
   </a>
   <h1 class="mt2 mb0 baskerville i fw1 f1">Obi Knows</h1>
   <h2 class="mt2 mb0 f6 fw4 ttu tracked u">Website Directory</h2>
+  <div id="app">
+    {{ message }}
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Welcome World'
+      }
+    })
+  </script>
   <!-- Nav List. Soon to be Window UI -->
   <nav class="bt bb tc mw7 center mt4">
     <a class="f6 f5-l link bg-animate black-80 hover-bg-light-purple dib pa3 ph4-l" href="/home">Home</a>

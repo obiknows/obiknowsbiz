@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Quattrocento" rel="stylesheet">
     <!-- Frappe Charts (add in npm later) -->
     <script src="https://unpkg.com/frappe-charts@0.0.8/dist/frappe-charts.min.iife.js"></script>
+    <!-- Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   </head>
   <body>
 
@@ -17,9 +19,8 @@
       <%= partial("flash.html") %>
       <%= yield %>
     </div>
-
+    
     <!-- Jquery + App JS -->
     <%= javascriptTag("application.js") %>
-    <%= javascriptTag("kube.js") %>
   </body>
 </html>
