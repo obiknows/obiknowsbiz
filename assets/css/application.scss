@@ -5,9 +5,6 @@
 // icons
 @import "~font-awesome/css/font-awesome.css";
 
-// Kube
-@import "kube.scss";
-
 // Tachyons (design system)
 @import "tachyons.css";  // commented out for kube
 
@@ -28,20 +25,4 @@
   // background-color: sandybrown;
   width: 80vw;
   // height: 80vh;
-}
-
-
-// Kube
-#media-grid {
-  @include grid-media-columns(2);
-  &>div {
-    margin-bottom: 20px;
-    height: 80px;
-  }
-  &>div:nth-child(2n) {
-    height: 200px;
-  }
-  &>div:nth-child(5n) {
-    height: 120px;
-  }
 }
