@@ -15,17 +15,14 @@
     padding: 2rem;
     margin: 0 auto;
     height: 70vh;
-    /* max-height: 440px; */
-     /* max-width: 740px; */
     min-width: 300px;
     min-height: 440px;
-    /* background-color: lemonchiffon; */
-    /* background-color: #ebe6d4, */
+    background-color: lemonchiffon;
     
-    width: 100%;
-  /* height: 100%; */
-  transform-style: preserve-3d;
-  transition: transform 1s;
+    width: 88%;
+    /* height: 100%;  */
+    transform-style: preserve-3d;
+    transition: transform 1s;
   }
 
   .card figure {
@@ -34,7 +31,7 @@
   /* position: absolute; */
   /* width: 100%; */
   /* height: 100%; */
-  backface-visibility: hidden;
+  /* backface-visibility: hidden; */
 }
 
 .card-front {
@@ -64,6 +61,7 @@
 </style>
 <div id="biz-card" class="card-container">
   <div class="spacer"></div>
+  <!-- Card Element -->
   <div class="card black-80 business-card">
     <figure class="card-front">
       <div class="card-front-content">
@@ -83,8 +81,25 @@
 
         </blockquote>
       </div>
+      <div class="dn card-back-content">
+        <!-- Card Front -->
+        <h3 class="f6 fw1 ttu tracked lh-title">business card</h3>
+        
+        <h2 class="libre f1 f-headline-l fw1 i black-80 mb1">Back Side</h2>
+        <blockquote class="ph0 mh0 measure f4 lh-copy center black-80">
+          <h3 class="fw1 black-80 mb5">
+            Contract Creative & Freelance Artisan
+          </h3>
+          <a
+          v-on:click="flipCard"
+          class="center f6 tracked ttu link dim ph3 pv2 mb2 dib white bg-black" 
+          href="#">contact</a>
+
+
+        </blockquote>
+      </div>
     </figure> 
-    <figure class="dn card-back">2</figure>
+    <figure class="card-back"></figure>
   
   </div>
   <div class="spacer"></div>
@@ -98,6 +113,12 @@
       flipCard: function () {
         // gets the .card selector, toggles .flipped class
         $('.card').toggleClass('flipped');
+        
+        setTimeout(() => {
+          $('.card-front-content').toggleClass('dn');
+          $('.card-back-content').toggleClass('dn');
+        }, 555);
+
         console.log('flipped it');
         
         // const card = document.querySelector('.card').classList.add('MyClass');
