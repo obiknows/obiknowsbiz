@@ -1,5 +1,9 @@
 <!-- Business Card -->
 <style>
+  textarea {
+    resize: none;
+  }
+
   /* Grid Layout */
   .card-container {
     display: grid;
@@ -31,7 +35,6 @@
   /* position: absolute; */
   /* width: 100%; */
   /* height: 100%; */
-  /* backface-visibility: hidden; */
 }
 
 .card-front {
@@ -39,11 +42,17 @@
 }
 
 .card-back {
+  /* backface-visibility: hidden; */
   background: lemonchiffon;
   transform: rotateY( 180deg );
 }
 
 .card.flipped {
+  transform: rotateY( 180deg );
+}
+
+
+.card-back-content { 
   transform: rotateY( 180deg );
 }
 
@@ -82,25 +91,41 @@
         </blockquote>
       </div>
       <div class="dn card-back-content">
-        <!-- Card Front -->
-        <h3 class="f6 fw1 ttu tracked lh-title">business card</h3>
-        
-        <h2 class="libre f1 f-headline-l fw1 i black-80 mb1">Back Side</h2>
+        <!-- Card Back -->
+        <div class="pa4-l">
+          <form class="bg-light-red mw7 center pa4 br2-ns ba b--black-10">
+            <fieldset class="cf bn ma0 pa0">
+              <legend class="pa0 f5 f4-ns mb3 black-80">Leave a message</legend>
+              <div class="cf">
+                <label class="clip" for="email-address">Email Address</label>
+                <input class="f6 f5-l input-reset bn fl black-80 bg-white pa3 lh-solid w-100 w-75-m w-80-l br2-ns br--left-ns mb3" placeholder="Your Email Address"
+                  type="text" name="email-address" value="" id="email-address">
+                <div>
+                  <textarea id="message" name="message" class="db border-box hover-black w-100 measure ba b--black-20 pa2 br2 mb2" aria-describedby="message-desc" rows="3" maxlength=""></textarea>
+                  <small id="comment-desc" class="f6 black-60">Leave a message in the blank
+                    <a href="#" class="link underline black-80 hover-blue">or send a regular email </a>
+                  </small>
+                </div>
+                <input class="f6 f5-l button-reset fl pv3 tc bn bg-animate bg-black-70 hover-bg-black white pointer w-100 w-25-m w-20-l br2-ns br--right-ns"
+                  type="submit" value="Send">
+              </div>
+            </fieldset>
+          </form>
+        </div>
+
+
         <blockquote class="ph0 mh0 measure f4 lh-copy center black-80">
-          <h3 class="fw1 black-80 mb5">
-            Contract Creative & Freelance Artisan
-          </h3>
           <a
           v-on:click="flipCard"
           class="center f6 tracked ttu link dim ph3 pv2 mb2 dib white bg-black" 
-          href="#">contact</a>
-
-
+          href="#">
+          back
+        </a>
         </blockquote>
       </div>
     </figure> 
     <figure class="card-back"></figure>
-  
+      
   </div>
   <div class="spacer"></div>
 </div>
@@ -117,12 +142,9 @@
         setTimeout(() => {
           $('.card-front-content').toggleClass('dn');
           $('.card-back-content').toggleClass('dn');
-        }, 555);
+        }, 420);
 
-        console.log('flipped it');
-        
-        // const card = document.querySelector('.card').classList.add('MyClass');
-
+        // console.log('flipped it');
       }
     }
   })
