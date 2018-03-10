@@ -81,6 +81,7 @@ func App() *buffalo.App {
 
 		app.GET("/hemp", HempIndex)
 		app.GET("/sounds", BeatsIndex)
+		app.GET("/ipfs/index", IpfsIndex)
 	}
 
 	return app
